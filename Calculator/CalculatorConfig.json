@@ -1,0 +1,7 @@
+{
+  "dependencies": [
+    "<dependency>\n  <groupId>junit</groupId>\n  <artifactId>junit</artifactId>\n  <version>4.13.2</version>\n  <scope>test</scope>\n  </dependency>\n"
+  ],
+  "refactoring-limit": 5,
+  "smells-allowed": 1
+}
