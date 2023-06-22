@@ -2,7 +2,7 @@ import org.junit.*;
 import static org.junit.Assert.*;
 
 // Game: 1001
-public class TestByteArrayHashMap {
+public class ByteArrayHashMapTest {
 
 	@Test(timeout = 4000)
 	public void test_1_195() throws Throwable {
