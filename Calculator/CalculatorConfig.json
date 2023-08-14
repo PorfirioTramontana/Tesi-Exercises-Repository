@@ -1,10 +1,14 @@
 {
+  "exerciseId": "Calculator_1",
   "refactoring_game_configuration": {
     "dependencies": [
       "<dependency>\n  <groupId>junit</groupId>\n  <artifactId>junit</artifactId>\n  <version>4.13.2</version>\n  <scope>test</scope>\n  </dependency>\n"
     ],
     "refactoring_limit": 5,
-    "smells_allowed": 1
+    "smells_allowed": 3,
+    "ignored_smells": [
+      "Lazy Test"
+    ]
   },
   "check_game_configuration": {
     "questions": [
@@ -14,13 +18,11 @@
         "answers": [
           {
             "answerText": "Assertion roulette",
-            "isCorrect": true,
-            "checked": false
+            "isCorrect": true
           },
           {
             "answerText": "Magic number",
-            "isCorrect": false,
-            "checked": false
+            "isCorrect": false
           }
         ]
       },
@@ -29,15 +31,16 @@
         "questionCode": "    @Test\n    public void testSubtract() {\n        int a = 25; int b = 20; \n        int expectedResult = 5; \n        long result = objCalcUnderTest.subtract(a, b);\n        assertEquals(expectedResult, result);\n    }\n",
         "answers": [
           {
-            "answerText": "AAAAA",
+            "answerText": "Resource Optimism",
             "isCorrect": true
           },
           {
-            "answerText": "BBBBB",
+            "answerText": "Unknown Test",
             "isCorrect": false
           }
         ]
       }
     ]
-  }
+  },
+  "auto_valutative": true
 }

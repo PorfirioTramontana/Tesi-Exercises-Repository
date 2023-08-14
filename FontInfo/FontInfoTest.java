@@ -210,7 +210,7 @@ public class FontInfoTest {
 	public void test_21_835() throws Throwable {
 		// test here!
 		FontInfo f1 = new FontInfo();
-		TestFontInfo l = new TestFontInfo();
+		FontInfoTest l = new FontInfoTest();
 		
 		assertEquals(false,f1.equals(l));
 	}

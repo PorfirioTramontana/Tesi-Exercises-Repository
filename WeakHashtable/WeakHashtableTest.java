@@ -16,7 +16,7 @@ public class WeakHashtableTest {
 		// test here!
 		WeakHashtable wh = new WeakHashtable();
 		assertTrue(wh.isEmpty());
-				
+
 	}
 
 	@Test(timeout = 4000)
@@ -27,7 +27,7 @@ public class WeakHashtableTest {
 		wh.put("b",new Integer(2));
 		wh.put("c",new Integer(3));
 		wh.put("d",new Integer(4));
-		
+
 		assertTrue(wh.containsKey("a"));
 	}
 
@@ -39,16 +39,16 @@ public class WeakHashtableTest {
 		wh.put("b",new Integer(2));
 		wh.put("c",new Integer(3));
 		wh.put("d",new Integer(4));
-		
+
 		assertFalse(wh.containsKey("e"));
 	}
 
 	@Test(timeout = 4000)
 	public void test_5_1187() throws Throwable {
 		WeakHashtable wilko = new WeakHashtable();
-	
 
-		
+
+
 		assertFalse(wilko.containsKey("123"));
 	}
 
@@ -60,20 +60,20 @@ public class WeakHashtableTest {
 		wh.put("b",new Integer(2));
 		wh.put("c",new Integer(3));
 		wh.put("d",new Integer(4));
-		
+
 		assertFalse(wh.equals("new Integer(5)"));
 	}
 
 	@Test(timeout = 4000)
 	public void test_7_1264() throws Throwable {
-		
+
 		java.util.HashMap foo = new java.util.HashMap();
 		WeakHashtable w = new WeakHashtable();
 		foo.put("a","b");
 		w.putAll(foo);
 		assertTrue(w.keySet().contains("a"));
 		assertTrue(w.containsKey("a"));
-		
+
 	}
 
 	@Test(timeout = 4000)
@@ -89,7 +89,7 @@ public class WeakHashtableTest {
 			ww.put("shit",null);
 			fail("Expected exception");
 		}catch(NullPointerException npe){
-			assertEquals("Null values are not allowed",npe.getMessage());	
+			assertEquals("Null values are not allowed",npe.getMessage());
 		}
 	}
 
@@ -100,19 +100,19 @@ public class WeakHashtableTest {
 		wh.put("b",new Integer(2));
 		wh.put("c",new Integer(3));
 		wh.put("d",new Integer(4));
-		
+
 		wh.remove(new String("c"));
-		
+
 		assertFalse(wh.containsKey("c"));
 	}
 
 	@Test(timeout = 4000)
 	public void test_10_1279() throws Throwable {
-				WeakHashtable wh = new WeakHashtable();
+		WeakHashtable wh = new WeakHashtable();
 		wh.put("a",new Integer(1));
 		wh.put("b",new Integer(2));
 		wh.put("c",new Integer(3));
-		
+
 		java.util.Enumeration e = wh.keys();
 		assertEquals("b",e.nextElement());
 		e.nextElement();

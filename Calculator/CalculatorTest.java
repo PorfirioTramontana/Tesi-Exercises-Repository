@@ -17,23 +17,24 @@ public void setUp() {
 objCalcUnderTest = new Calculator();
 }
 
-@Test
-public void testAdd() { 
-int a = 15; int b = 20; 
-int expectedResult = 35;
-//Act 
-long result = objCalcUnderTest.add(a, b);
-//Assert
-assertEquals(expectedResult, result);
-}
+    @Test
+    public void testAdd() {
+        int a = 15; int b = 20;
+        int expectedResult = 35;
+        //Act
+        long result = objCalcUnderTest.add(a, b);
+        //Assert
+        assertEquals(expectedResult, result);
+        assertEquals(result, result);
+    }
 
-@Test
-public void testSubtract() {
-int a = 25; int b = 20; 
-int expectedResult = 5; 
-long result = objCalcUnderTest.subtract(a, b);
-assertEquals(expectedResult, result);
-}
+    @Test
+    public void testSubtract() {
+        int a = 25; int b = 20;
+        int expectedResult = 5;
+        long result = objCalcUnderTest.subtract(a, b);
+        assertEquals(expectedResult, result);
+    }
 
 @Test
 public void testMultiply() {
