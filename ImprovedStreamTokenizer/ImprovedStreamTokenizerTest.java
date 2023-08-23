@@ -2,7 +2,7 @@ import org.junit.*;
 import static org.junit.Assert.*;
 
 // Game: 1008
-public class TestImprovedStreamTokenizer {
+public class ImprovedStreamTokenizerTest {
 
 	@Test(timeout = 4000)
 	public void test_1_2172() throws Throwable {

@@ -36,12 +36,13 @@ public class Calculator {
     * b is zero.
     */
     public double divide(int a, int b) {
-    double result;
-    if (b == 0) {
-    throw new IllegalArgumentException("Divisor cannot divide by zero");
-    } else {
-    result = Double.valueOf(a)/Double.valueOf(b);
-    }
+        double result;
+        if (b == 0) {
+            throw new IllegalArgumentException("Divisor cannot divide by zero");
+        }
+        else {
+            result = Double.valueOf(a)/Double.valueOf(b);
+        }
     return result;
     }
-    }
+}
